@@ -16,6 +16,7 @@ Compiler Features:
 
 Bugfixes:
  * AST: Do not output value of Yul literal if it is not a valid UTF-8 string.
+ * Natspec: Allow multiple ``@return`` tags on public state variable documentation.
  * SMTChecker: Fix internal error on struct constructor with fixed bytes member initialized with string literal.
  * Source Locations: Properly set source location of scoped blocks.
  * Standard JSON: Properly allow the ``inliner`` setting under ``settings.optimizer.details``.
