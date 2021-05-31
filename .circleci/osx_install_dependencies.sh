@@ -54,6 +54,12 @@ then
   cp z3-4.8.10-x64-osx-10.15.7/include/* /usr/local/include
   rm -rf z3-4.8.10-x64-osx-10.15.7
 
+  # cvc4
+  brew link cmake
+  brew link coreutils
+  brew tap cvc4/cvc4
+  brew install cvc4/cvc4/cvc4
+
   # evmone
   wget https://github.com/ethereum/evmone/releases/download/v0.7.0/evmone-0.7.0-darwin-x86_64.tar.gz
   tar xzpf evmone-0.7.0-darwin-x86_64.tar.gz -C /usr/local
