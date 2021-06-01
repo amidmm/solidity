@@ -641,6 +641,19 @@ void TypeChecker::visitManually(
 						"Can only use modifiers defined in the current contract or in base contracts."
 					);
 			}
+
+		if (!modifierDecl->isImplemented())
+		{
+			SecondarySourceLocation hint;
+			hint.append("Declared here.", modifierDecl->location());
+			m_errorReporter.fatalTypeError(
+				0000_error,
+				_modifier.location(),
+				hint,
+				"Referenced modifier not implemented."
+			);
+		}
+
 	}
 	else
 		// check parameters for Base constructors
